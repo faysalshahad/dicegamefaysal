@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dice Game-FAYSAL</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!--This following link is our own custom CSS link. The rules in HTML are if
+  there are more than one css stylesheet available for the html page to load then
+  html will give priority to the last one. In this case all the bootstrap CSS
+  elements will be uploaded to our website but if we override or change some of
+  the properties inside our own CSS file then Html will give priority to our CSS
+  file's modification. It will only happen when we will put our custom CSS file
+    at the very end of all other CSS file.-->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  <!-- linking favicon icon for the browser into this html file-->
+  <link rel="icon" href="favicon.ico">
+
+
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Play Dice Game With Me</h1>
+
+
+
+<!--Refresing the Page button -->
+<div class="containerForPlayAgainButton">
+
+<button type="button" class="btn btn-outline-primary btn-lg PlayAgain-Buttons" onClick="window.location.reload()">
+   PLAY AGAIN
+</button>
+
+</div>
+
+
+    <div class="dice">
+      <p>Player 1</p>
+      <h2>Score: 6</h2>
+      <img class="img1" src="images/dice6.png">
+    </div>
+
+    <div class="dice">
+      <p>Player 2</p>
+      <h2>Score: 6</h2>
+      <img class="img2" src="images/whitedice6.png">
+    </div>
+
+  </div>
+
+
+  <!--The reason we have put JavaScriptat the end just before the closing the
+</body> tag is because it will ensure all the javascript codes will be executed
+properly.-->
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+<footer>
+  <!--www 🎲 App Brewery 🎲 com -->
+
+  <div class="contact-me">
+    <h2>Get In Touch</h2>
+    <h3>Please visit my LinkedIn Profile.</h3>
+    <a class="ContactMebutton" href="https://www.linkedin.com/in/md-faysal-shahad-b565b5162/">
+      <button type="button" class="btn btn-outline-primary btn-lg Download-Buttons">
+        LinkedIn Profile </button>
+    </a>
+
+    <h3>Email Me:</h3>
+    <a class="ContactMebutton" href="mailto:faysalshahad@gmail.com">
+      <button type="button" class="btn btn-outline-danger btn-lg Download-Buttons">
+        Contact MD Faysal Shahad</button>
+    </a>
+
+  </div>
+
+  <br>
+
+  <div class="bottomDivContainer">
+
+    <!--
+      <p class= "copyrightParagraph" >© <b> MD FAYSAL SHAHAD.</b> <br> <span id="displayDateTime"> </span> </p>
+    <a class="footer-link" href="https://twitter.com/">Twitter</a>
+    <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+    -->
+    <p>© <b> MD FAYSAL SHAHAD.</b> <br> <span id="displayDateTime"> </span> </p>
+
+    <script type="text/javascript">
+      var today = new Date();
+      var day = today.getDay();
+      var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+      var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+      //var time = today.getHours() + ":" + today.getMinutes() ":" + today.getSeconds();
+      //var dateTime = date+' '+time;
+      var dateTime = date;
+      document.getElementById("displayDateTime").innerHTML = dateTime + ' , ' + daylist[day] + '.';
+    </script>
+
+  </div>
+
+</footer>
+
+</html>
